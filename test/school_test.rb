@@ -64,7 +64,7 @@ class SchoolTest < Minitest::Test
   end
 
   def test_are_student_names_capitalized
-    school = School.new('9:00', 7)
+    school = School.new('12:00', 7)
 
     school.add_student_name('Aurora')
     school.add_student_name('tim')
@@ -74,8 +74,7 @@ class SchoolTest < Minitest::Test
   end
 
   def test_it_can_convert_to_clock_time
-    school = School.new('12:00', 7)
-    require "pry"; binding.pry
+    school = School.new('9:00', 7)
 
     assert_equal "4:00", school.convert_end_time_to_clock_time
   end
